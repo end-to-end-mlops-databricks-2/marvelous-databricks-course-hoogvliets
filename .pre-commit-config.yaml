@@ -17,7 +17,7 @@ repos:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix, --show-fixes]
       - id: ruff-format
-        args: [--line-length, 128]
+        args: [--line-length=128]
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.991
     hooks:
