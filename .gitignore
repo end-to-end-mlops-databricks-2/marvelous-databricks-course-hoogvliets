@@ -15,10 +15,6 @@ __pycache__/
 # Data files
 *.csv
 
-# Notebook files
-*.ipynb
-*.ipynb_checkpoints
-
 # Distribution / packaging
 .Python
 build/
@@ -64,7 +60,9 @@ coverage.xml
 target/
 
 # Jupyter Notebook
+*.ipynb
 .ipynb_checkpoints
+notebooks/**/*.jsonld
 
 # pyenv
 .python-version
