@@ -1,5 +1,5 @@
 [project]
-name = "housing-price"
+name = "power-consumption"
 version = "0.0.1"
 description = "Housing prices project"
 requires-python = ">=3.11, <3.12"
@@ -33,7 +33,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where =["src"]
-include = ["house_price*"]
+include = ["powercons*"]
 
 [tool.ruff]
 line-length = 120
@@ -41,8 +41,11 @@ select = [
     "F",  # pyflakes rules
     "E",  # pycodestyle error rules
     "W",  # pycodestyle warning rules
-    "B",  # flake8-bugbear rules
     "I",  # isort rules
+    "C4", # flake8-comprehensions rules
+    "SIM", # flake8-simplify rules
+    "B",  # flake8-bugbear rules
+
 ]
 ignore = [
     "E501",  # line-too-long
