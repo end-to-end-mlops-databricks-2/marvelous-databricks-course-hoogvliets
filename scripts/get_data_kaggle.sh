@@ -17,4 +17,3 @@ rm power-consumption.zip
 
 # rename file
 mv "Tetuan City power consumption.csv" "tcpc_kaggle.csv"
-
