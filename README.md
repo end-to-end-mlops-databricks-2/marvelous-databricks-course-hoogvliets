@@ -20,6 +20,12 @@ uv lock
 
 The package has al dev depedencies configured. Install them by running `uv pip install -e ".[dev]"`, use the quotation marks if you are running zshell. For vanilla terminal you can leave them out.
 
+
+### Recommendations
+
+* Don't allow commit without succesful linting, active pre-commit hooks locally before each commit.
+Run `pre-commit install`
+
 ## Access to the data
 
 ### Access to Kaggle API
