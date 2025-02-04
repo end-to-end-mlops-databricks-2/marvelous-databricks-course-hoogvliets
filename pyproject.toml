@@ -13,6 +13,7 @@ dependencies = ["mlflow==2.17.0",
                 "pyarrow==14.0.1",
                 "scikit-learn==1.5.2",
                 "lightgbm==4.5.0",
+                "loguru>=0.7.3",
                 "scipy==1.14.1",
                 "databricks-feature-engineering==0.6",
                 "databricks-feature-lookup==1.2.0",
@@ -23,6 +24,7 @@ dependencies = ["mlflow==2.17.0",
 [project.optional-dependencies]
 dev = ["databricks-connect>=15.4.1, <16",
        "ipykernel>=6.29.5, <7",
+       "jupyterlab>=4.3.5",
        "pip>=24.2",
        "pre-commit>=4.1.0, <5"]
 
@@ -36,7 +38,7 @@ where =["src"]
 include = ["powercons*"]
 
 [tool.ruff]
-line-length = 120
+line-length = 128
 select = [
     "F",  # pyflakes rules
     "E",  # pycodestyle error rules
