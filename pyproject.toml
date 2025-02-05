@@ -18,7 +18,9 @@ dependencies = ["mlflow==2.17.0",
                 "databricks-feature-engineering==0.6",
                 "databricks-feature-lookup==1.2.0",
                 "databricks-sdk==0.32.0",
-                "pydantic==2.9.2"
+                "pydantic==2.9.2",
+                "types-pyyaml==6.0.12",
+                "pyyaml>=6.0.1"
                 ]
 
 [project.optional-dependencies]

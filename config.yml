@@ -1,0 +1,22 @@
+data_path: data/tcpc_kaggle.csv
+
+numerical_features:
+- Temperature
+- Humidity
+- Wind Speed
+- general diffuse flows
+- diffuse flows
+
+timestamp:
+- DateTime
+
+targets:
+- "Zone 1 Power Consumption"
+- "Zone 2  Power Consumption"
+- "Zone 3  Power Consumption"
+
+train_params:
+  train_size: 0.7
+  test_size: 0.2
+  val_size: 0.1
+  random_state: 1337
