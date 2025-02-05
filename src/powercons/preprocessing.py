@@ -13,27 +13,23 @@ class Preprocessor:
         self.config = config
         self.df = df
 
-    # Set the datatypes of the numerical features
-    def set_numericals(self):
+    def preprocess_data(self):
+        # Set the datatypes of the numerical features
         for col in self.config.numerical_features:
             self.df[col] = to_numeric(self.df[col], errors="coerce")
 
-    # Set the datatypes of the timestamps
-    def set_timestamps(self):
+        # Set the datatypes of the timestamps
         for col in self.config.timestamps:
             self.df[col] = to_datetime(self.df[col])
 
-    # Set the datatypes of the targets
-    def set_targets(self):
+        # Set the datatypes of the targets
         for col in self.config.targets:
             self.df[col] = to_numeric(self.df[col], errors="coerce")
 
-    # Aggregate targets
-    def aggregate_targets(self):
+        # Aggregate targets
         self.df["target"] = self.df[self.config.targets].sum(axis=1)
 
-    # Organise columns
-    def organise_columns(self):
+        # Organise columns
         self.df = self.df[self.config.numerical_features]
         self.df["timestamp"] = self.df[self.config.timestamp]
 
