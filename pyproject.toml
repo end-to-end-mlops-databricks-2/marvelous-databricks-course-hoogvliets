@@ -1,5 +1,5 @@
 [project]
-name = "housing-price"
+name = "power-consumption"
 version = "0.0.1"
 description = "Housing prices project"
 requires-python = ">=3.11, <3.12"
@@ -13,16 +13,20 @@ dependencies = ["mlflow==2.17.0",
                 "pyarrow==14.0.1",
                 "scikit-learn==1.5.2",
                 "lightgbm==4.5.0",
+                "loguru>=0.7.3",
                 "scipy==1.14.1",
                 "databricks-feature-engineering==0.6",
                 "databricks-feature-lookup==1.2.0",
                 "databricks-sdk==0.32.0",
-                "pydantic==2.9.2"
+                "pydantic==2.9.2",
+                "types-pyyaml==6.0.12",
+                "pyyaml>=6.0.1"
                 ]
 
 [project.optional-dependencies]
 dev = ["databricks-connect>=15.4.1, <16",
        "ipykernel>=6.29.5, <7",
+       "jupyterlab>=4.3.5",
        "pip>=24.2",
        "pre-commit>=4.1.0, <5"]
 
@@ -33,16 +37,19 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where =["src"]
-include = ["house_price*"]
+include = ["powercons*"]
 
 [tool.ruff]
-line-length = 120
+line-length = 128
 select = [
     "F",  # pyflakes rules
     "E",  # pycodestyle error rules
     "W",  # pycodestyle warning rules
-    "B",  # flake8-bugbear rules
     "I",  # isort rules
+    "C4", # flake8-comprehensions rules
+    "SIM", # flake8-simplify rules
+    "B",  # flake8-bugbear rules
+
 ]
 ignore = [
     "E501",  # line-too-long
